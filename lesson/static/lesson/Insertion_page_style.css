@@ -1,0 +1,255 @@
+h2 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 257px;
+    height: 31px;
+    left: 370px;
+    top: 14px;
+    font-family: 'Are You Serious';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #33363F;
+
+    mix-blend-mode: normal;
+    -webkit-text-fill-color: #84A180;
+}
+
+body {
+    background-image: url('Background.jpg')
+}
+
+.main-page {
+    /* Rectangle 4-1 */
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 500px;
+    top: 60px;
+    background: #FFFFFF;
+}
+
+.placeholder {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    font-size: large;
+    position: absolute;
+    width: 243px;
+    height: 38px;
+
+    -webkit-text-fill-color: #84A180;
+    text-align: right;
+    left: 54%;
+    background: #FFFFFF;
+    border: 2px solid #84A180;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+#course-name {
+    top: 12%;
+}
+
+#teacher-name {
+    top: 21%;
+}
+
+#course-code {
+    top: 30%;
+}
+
+#course-time {
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 128px 8px 4px;
+    gap: 8px;
+    isolation: isolate;
+
+    position: absolute;
+    width: 243px;
+    height: 38px;
+    left: 55%;
+    top: 50%;
+
+    background: rgba(0, 0, 0, 0.04);
+    border: 2px solid #84A180;
+    -webkit-text-fill-color: #84A180;
+    border-radius: 8px;
+}
+
+#tedad-vahed {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+
+    position: absolute;
+    width: 69px;
+    height: 45px;
+    left: 61%;
+    top: 64%;
+
+    background: rgba(255, 255, 255, 0.0001);
+    border: 2px solid #84A180;
+    border-radius: 8px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+#exam-date {
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+
+    position: absolute;
+    width: 215px;
+    height: 35px;
+    left: 38px;
+    top: 70px;
+
+    background: rgba(0, 0, 0, 0.04);
+    border: 2px solid #84A180;
+    border-radius: 8px;
+
+    /* date */
+
+
+    width: 200px;
+    height: 37px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 130%;
+    /* or 22px */
+
+
+    color: #84A180;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+
+}
+
+p {
+    position: absolute;
+    width: 36px;
+    height: 25px;
+    left: 156px;
+    top: 166px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    text-align: right;
+
+    color: #84A180;
+
+}
+
+.check-box {
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 24.6px;
+    height: 24.6px;
+    left: 205px;
+    top: 179px;
+
+}
+
+#button {
+    background: rgba(0, 0, 0, 0.04);
+    border: 2px solid #84A180;
+    border-radius: 8px;
+
+    position: absolute;
+    width: 120px;
+    height: 45px;
+    left: 40%;
+    top: 85%;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 130%;
+    /* identical to box height, or 22px */
+
+
+    color: #537F65;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+.image {
+    position: absolute;
+    left: 330px;
+    top: 75px;
+    width: 40px;
+    height: 30px;
+}
+
+.error{
+    position: absolute;
+    right:100px
+}
+
+.logo {
+
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 35px;
+    top: 63px;
+
+}

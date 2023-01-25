@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa-IR">
+    <head>
+        <script src="https://kit.fontawesome.com/709774c170.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="{% static 'login/login_page.css' %}">
+    </head>
+
+    <body>
+        <div class="container">
+<!--                <div id="image"><img src="Leaf_1-removebg-preview.jpg" id="image-leaf" ></div> &lt;!&ndash;jadiddddd&ndash;&gt;-->
+            <div class="leafpicture-container"></div>
+            <div class="right-container">
+                <div class="hello-text-wrapper">
+                    <h1 id="hello-text">سلام!</h1>
+                </div>
+                <div class="greeting-text-wrapper">
+                    <h3 class="greeting-text1">به سایت ما</h3>
+                    <h3 class="greeting-text2">خوش اومدین :)</h3>
+                </div>
+                <div class="signup-button-wrapper">
+                    <a href="{% url 'login:register' %}" class="signup-button">ثبت نام</a>
+                </div>
+            </div>
+
+
+            <div class="left-container">
+                <div class="main">
+                    <div class="header">
+                        <h2 id="signin-massage">ورود</h2>
+                    </div>
+                    <div class="content">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="username-wrapper">
+                                <h2 id="username-text">نام کاربری </h2>
+                                <input type="text" placeholder="" name="username" id="username-input">
+                                <i></i>
+                            </div>
+
+                            <div class="password-wrapper">
+                                <h2 id="password-text">رمز عبور</h2>
+                                <input type="password" placeholder="" name="password" id="password-input">
+                            </div>
+
+                            <div class="sign-in-button">
+                                <input type="submit" value="ورود" class="signin-button">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="error">
+                    {{error}}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

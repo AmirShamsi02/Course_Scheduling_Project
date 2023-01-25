@@ -1,0 +1,209 @@
+body {
+    direction: rtl;
+    font-family: Inter, Tahoma, Arial, Verdana;
+    box-sizing: border-box;
+    position: relative;
+    background-image: url(Background.jpg);
+}
+
+.container {
+    margin: 50px auto;
+    width: 1000px;
+    height: 600px;
+    background: #F8F9F8;
+    backdrop-filter: blur(2px);
+    border-radius: 88px;
+}
+
+.right-container {
+    width: 500px;
+    background: rgba(110, 164, 132, 0.9);
+    height: 600px;
+    border-radius: 0px 88px 88px 0px;
+}
+
+#hello-text{
+    position: absolute;
+    left: 50%;
+    right: 0%;
+    top: 30%;
+    bottom: 0%;
+
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 48px;
+    text-align: center;
+
+    color: #F8F9F8;
+
+}
+
+.greeting-text1{
+    position: absolute;
+    left: 50%;
+    right: 0%;
+    top: 37%;
+    bottom: 0%;
+
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 38px;
+    text-align: center;
+
+    color: #F8F9F8;
+}
+
+.greeting-text2{
+    position: absolute;
+    left: 50%;
+    right: 0%;
+    top: 41.5%;
+    bottom: 0%;
+
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 38px;
+    text-align: center;
+
+    color: #F8F9F8;
+}
+.signup-button{
+    position: absolute;
+    width: 150px;
+    height: 45px;
+    right: 175px;
+    top: 330px;
+
+    box-sizing: border-box;
+    align-item: center;
+
+    font: 17px;
+    text-decoration: none;
+    background-color: #537F65;
+    color: #FFFFFF;
+    gap: 8px;
+    padding: 8px 50px 0px 8px;
+    border: 2px solid #FFFFFF;
+    border-radius: 81px;
+}
+
+#signin-massage{
+    /* ورود */
+    position: absolute;
+    width: 134px;
+    height: 88px;
+    left: 170px;
+    top: 0px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 84px;
+
+    color: #33363F;
+}
+
+.content{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 570px;
+    top: 150px;
+}
+
+
+#username-text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25.5px;
+    line-height: 20px;
+    /* identical to box height */
+        color: #000000;
+}
+
+#username-input{ /* todo "what we write in the field should look good"*/
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+
+    width: 335px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #84A180;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+
+    font-size:25px;
+}
+
+#password-text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25.5px;
+    line-height: 20px;
+    /* identical to box height */
+    color: #000000;
+}
+
+#password-input{
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+
+    width: 335px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #84A180;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+
+    font-size:25px;
+}
+
+.signin-button {
+    position: absolute;
+    width: 150px;
+    height: 45px;
+    left: 160px;
+    top: 280px;
+
+    box-sizing: border-box;
+    align-item: center;
+
+    font: 30px;
+    background-color:white;
+    color:#84A180;
+    gap: 8px;
+    border: 2px solid #84A180;
+    border-radius: 81px;
+}
+/* jadiddddd*/
+#image{
+background: url(Leaf 1 .png);
+transform: rotate(-84.45deg);
+}
+#image-leaf{
+    width: 306.63px;
+    height: 441.31px;
+    left: 249px;
+    top: 11px;
+    position: absolute;
+}

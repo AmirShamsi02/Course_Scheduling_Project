@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'login/signup_page.css' %}">
+</head>
+<body>
+        <div class="header"></div>
+        <div class="container">
+            <div class="right-container">
+                <div class="error-box">
+                    {{error}}
+                </div>
+                <div class="content">
+                    <div id="header">
+                    <h2 id="signup-message">ثبت نام</h2>
+                    </div>
+                    <div class="signup-form">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="username-wrapper">
+                                <label for="username-input" id="username-text">نام کاربری</label>
+                                <input type="text" name="username" id="username-input">
+                            </div>
+                            <div class="password-wrapper">
+                                <label for="password-input" id="password-text">رمز عبور</label>
+                                <input type="password" name="password" id="password-input">
+                            </div>
+                            <div class="signup-button-wrapper">
+                                <input type="submit" value="ثبت نام" class="signup-button" id="signup-button">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="left-container">
+                 <div class="hello-text-wrapper">
+                    <p id="hello-text">سلام!</p> <!--jadiddd-->
+                </div>
+                <div class="greeting-text-wrapper">
+                    <p >به سایت ما خوش اومدین :)</br>
+                        اگه قبلا ثبت نام کردین که خیلی خیلی خوش اومدین منتها اشتباه اومدین!
+ کافیه بزنین روی دکمه زیر تا به صفحه ورود برده بشین.
+</p>    <!--jadidd-->
+                </div>
+                    <div class="signin-link">
+                        <a href="{% url 'login:login' %}" id="signin-button-link"> ورود</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

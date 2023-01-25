@@ -1,0 +1,412 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uni helper</title> <!--esm site-->
+    <link rel="stylesheet" href="{% static 'schedule/Schedule_table.css'%}">
+    <script src="https://kit.fontawesome.com/f7d5efe172.js" crossorigin="anonymous"></script>
+    <style>
+        td,th {
+        border: 2px solid;
+        }
+    </style>
+</head>
+<body id="wrapper" >
+    <div id="header">
+     <div class="right-header">
+        <span id="space">
+            <div id="icon-user">
+            <i class="fas fa-user"></i>
+        </div>
+        <div id="username">{{username}}</div>
+        </span>
+     </div>
+     <div class="left-header">
+         <form action="" method="post" >
+             <input id="logout" type="submit" name="logout" value="خروج" > <!--jadiddd-->
+             {% csrf_token %}
+         <span id="space1">
+             <i class="fa-solid fa-door-closed"></i>
+         </span>
+         </form>
+     </div>
+ </div>
+    <div id="content">
+    <!-- <div class="top">
+         <div class="top-right"></div>
+         <div class="top-center"></div>
+         <div class="top-left"></div>
+     </div> -->
+     <div class="center">
+         <div class="center-right">
+      <div class="table" id="schedule-table">
+            <table  dir="rtl" width="900" height="600" align="center" cellspacing="0">
+                <p id="title-table">برنامه هفتگی</p>
+                <thead>
+                    <tr>
+                        <th id="">
+
+                        </th>
+                        <th align="right">
+                            7:30
+                        </th>
+                        <th align="right">
+                            9:30
+                        </th>
+                        <th align="right">
+                            11:30
+                        </th>
+                        <th align="right">
+                            13:30
+                        </th>
+                        <th align="right">
+                            15:30
+                        </th>
+                        <th align="right">
+                            17:30
+                        </th>
+                        <th align="right">
+                            19:30
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="1">
+                        <td align="center">
+                            شنبه
+                        </td>
+                        <td>
+                            {% for lesson in sat_a %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sat_b %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sat_c %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sat_d %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sat_e %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sat_f %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sat_g %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            یکشنبه
+                        </td>
+                        <td>
+                            {% for lesson in sun_a %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sun_b %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sun_c %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sun_d %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sun_e %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sun_f %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in sun_g %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                            <tr>
+
+                        <td align="center">
+                            دوشنبه
+                        </td>
+                        <td>
+                            {% for lesson in mon_a %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in mon_b %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in mon_c %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in mon_d %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in mon_e %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in mon_f %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in mon_g %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                            <tr>
+                        <td align="center">
+                            سه شنبه
+                        </td>
+                        <td>
+                            {% for lesson in tue_a %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in tue_b %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in tue_c %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in tue_d %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in tue_e %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in tue_f %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in tue_g %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            چهارشنبه
+                        </td>
+                        <td>
+                            {% for lesson in wed_a %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in wed_b %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in wed_c %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in wed_d %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in wed_e %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in wed_f %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in wed_g %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            پنج شنبه
+                        </td>
+                        <td>
+                            {% for lesson in thu_a %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in thu_b %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in thu_c %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in thu_d %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in thu_e %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in thu_f %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for lesson in thu_g %}
+                                {{lesson.name}}
+                                <br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div></div>
+
+                      <div class="lesson" id="lesson-list">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                        <legend id="title-lesson">لیست دروس</legend>
+                <select name="lessons_list" id="list">
+                    {% for lesson in lessons %}
+                        <option value="{{lesson.code}}">{{lesson.name}}</option>
+                    {% endfor %}
+                </select>
+              <a href="{% url 'lesson:insert' %}" id="button-show"></a>
+                    <i class="fa-solid fa-play"></i>
+                    <br>
+<!--              <button type="submit" value="show" id="button-show" name="show-button"></button>-->
+<!--                <i class="fa-solid fa-play"></i>-->
+<!--                    <br>-->
+<!--                <div>-->
+<!--                    <input type="submit" name="logout" value="خروج" id="logout">-->
+<!--                </div>-->
+              <button type="submit" value="+" id="button-insert" name="add-button"></button>
+                    <i class="fa-solid fa-plus"></i>
+              <button type="submit" value="-" id="button-delete" name="remove-button"></button>
+                    <i class="fa-solid fa-minus"></i>
+              <button type="submit" value="edit" id="button-edit" name="edit-button"></button>
+                    <i class="fa-solid fa-edit"></i>
+                </form>
+             </div>
+
+         <div class="error-box" id="center-left-bottom">
+              <legend id="title-error">تصادمات</legend>
+         <div id="error">
+             <ul>
+                 {% for error in errors %}
+                    <li>{{error}}</li>
+                 {% endfor %}
+             </ul>
+         </div>
+     </div>
+        <!--
+     <div class="bottom">
+         <div class="bottom-right">
+             <div id="error"></div>
+         </div>
+         <div class="bottom-center"></div>
+         <div class="bottom-left"></div> -->
+ </div>
+            <div id="footer">2023-HSF</br>In every single thing you do,you are choosing a direction.your life is a product of choices.</div>
+        </div>
+</body>
+</html>
