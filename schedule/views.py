@@ -50,7 +50,7 @@ def list(request):
 
         lesson_code = request.POST.get('lessons_list', False)
 
-        lesson = Lesson.objects.get(code=lesson_code)
+        lesson = Lesson.objects.get(code=lesson_code, profile__login_user=User.get_user(request))
 
         if request.POST.get('add-button'):  # adding lesson to the table when + is clicked
             add_lesson(request, lesson)
